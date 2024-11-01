@@ -12,8 +12,7 @@ This project focuses on the **Design and Verification of an Asynchronous FIFO** 
 
 ## Project Goals
 - **Asynchronous FIFO Design**: The FIFO buffer enables data transfer across clock domains with different frequencies.
-- **Gray Code Pointers**: Gray code counters are used to manage pointer synchronization across clock domains, minimizing metastability.
-- **UVM-Based Verification**: A structured UVM environment tests the design with various scenarios, including edge cases and random burst testing.
+- **UVM-Based Verification**: A structured UVM environment tests the design with various scenarios, including corner cases and random burst testing.
 
 ## Key Features
 - **Cross-Domain Data Integrity**: Ensures secure data transfers between asynchronous sender and receiver clock domains.
@@ -31,7 +30,7 @@ The FIFO is configured with the following specifications:
 - **Idle Cycles**:
   - **Write Idle Cycles**: 0 cycles
   - **Read Idle Cycles**: 2 cycles between successive reads
-- **Control Signals**: The FIFO includes full, half-full, and empty flags, supporting precise control and monitoring of data flow across asynchronous domains.
+- **Control Signals**: The FIFO includes full, half-full, and empty flags, supporting precise control and monitoring of data flow.
 
 ## Documentation
 Refer to the `docs/` folder for:
