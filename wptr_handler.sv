@@ -60,5 +60,8 @@ module wptr_handler #(parameter PTR_WIDTH=3) (
   assign wfull = (g_wptr_next == {~g_rptr_sync[PTR_WIDTH:PTR_WIDTH-1], g_rptr_sync[PTR_WIDTH-2:0]});
   assign hfull = (b_wptr_next[PTR_WIDTH-1:0] - b_rptr_sync[PTR_WIDTH-1:0] >= 128);
 
+
 endmodule
+
+
 
