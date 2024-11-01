@@ -1,0 +1,1273 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:50:28 on Jun 11,2024
+# vlog -reportprogress 300 -coveropt 3 "+cover" "+acc" asynchronous_fifo.sv top.sv 
+# -- Compiling module synchronizer
+# -- Compiling module wptr_handler
+# -- Compiling module rptr_handler
+# -- Compiling module fifo_mem
+# -- Compiling module asynchronous_fifo
+# -- Compiling interface fifo_inf
+# ** Note: (vlog-2286) top.sv(4): Using implicit +incdir+C:/questasim64_2023.3/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling interface fifo_inf
+# ** Warning: ** while parsing file included at top.sv(5)
+# ** at interface.sv(1): (vlog-2275) Existing interface 'fifo_inf' at asynchronous_fifo.sv(35) will be overwritten.
+# -- Compiling package top_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling interface fifo_inf
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 22:50:29 on Jun 11,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vopt 2023.3 Compiler 2023.07 Jul 17 2023
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Start time: 22:50:29 on Jun 11,2024
+# vopt -reportprogress 300 top_tb -o top_optimized "+acc" "+cover=sbfec+asynchronous_fifo(rtl)." 
+# 
+# Top level modules:
+# 	top_tb
+# 
+# Analyzing design...
+# -- Loading module top_tb
+# -- Loading package mtiUvm.questa_uvm_pkg
+# -- Loading interface fifo_inf
+# -- Loading module asynchronous_fifo
+# -- Loading module synchronizer
+# -- Loading module wptr_handler
+# -- Loading module rptr_handler
+# -- Loading module fifo_mem
+# Incremental compilation check found 10 design-units (out of 11) may be reused.
+# Optimizing 1 design-unit (inlining 0/8 module instances):
+# -- Optimizing module wptr_handler(fast)
+# Optimized design name is top_optimized
+# End time: 22:50:32 on Jun 11,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1
+# vsim top_optimized -coverage "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 22:50:32 on Jun 11,2024
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top_tb(fast)
+# Loading work.fifo_inf(fast__2)
+# Loading work.asynchronous_fifo(fast)
+# Loading work.synchronizer(fast)
+# Loading work.wptr_handler(fast)
+# Loading work.rptr_handler(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.fifo_inf(fast)
+# Loading C:/questasim64_2023.3/uvm-1.1d\win64\uvm_dpi.dll
+# 1
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ** Warning: (vsim-3881) top.sv(62): Width conversion applied in bin 'others' for Coverpoint 'din'. Value '18446744073709551614' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb
+# ** Warning: (vsim-3882) top.sv(62): Out of bounds value range in bin 'others' for Coverpoint 'din' converted to nearest valid bounded range of [1:255].
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb
+# ** Warning: (vsim-8474) A higher value '18446744073709551615' is found in bin 'max' of Coverpoint 'din'. It is invalid and will be ignored.
+#    Time: 0 ns  Iteration: 0  Process: /top_tb/#INITIAL#113(coverage) File: top.sv Line: 63
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'max' in Coverpoint 'din' of Covergroup instance '\/top_tb/cv ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb
+# ** Warning: (vsim-3881) top.sv(68): Width conversion applied in bin 'others' for Coverpoint 'dout'. Value '18446744073709551614' changed to '255 (maximum)' value.
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb
+# ** Warning: (vsim-3882) top.sv(68): Out of bounds value range in bin 'others' for Coverpoint 'dout' converted to nearest valid bounded range of [1:255].
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb
+# ** Warning: (vsim-8474) A higher value '18446744073709551615' is found in bin 'max' of Coverpoint 'dout'. It is invalid and will be ignored.
+#    Time: 0 ns  Iteration: 0  Process: /top_tb/#INITIAL#113(coverage) File: top.sv Line: 69
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'max' in Coverpoint 'dout' of Covergroup instance '\/top_tb/cv ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ns  Iteration: 0  Instance: /top_tb
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO agent.sv(13) @ 0: uvm_test_top.env.agt [AGENT_CLASS] Inside Constructor!
+# UVM_INFO scoreboard.sv(16) @ 0: uvm_test_top.env.scr [SCOREBOARD_CLASS] Inside Constructor!
+# UVM_INFO agent.sv(19) @ 0: uvm_test_top.env.agt [AGENT_CLASS] Build Phase!
+# UVM_INFO sequencer.sv(7) @ 0: uvm_test_top.env.agt.sqr [SEQUENCER] Inside Constructor!
+# UVM_INFO driver.sv(12) @ 0: uvm_test_top.env.agt.drv [DRIVER_CLASS] Inside Constructor!
+# UVM_INFO monitor.sv(14) @ 0: uvm_test_top.env.agt.mon [MONITOR_CLASS] Inside Constructor!
+# UVM_INFO driver.sv(18) @ 0: uvm_test_top.env.agt.drv [DRIVER_CLASS] Build Phase!
+# UVM_INFO monitor.sv(20) @ 0: uvm_test_top.env.agt.mon [MONITOR_CLASS] Build Phase!
+# UVM_INFO sequencer.sv(13) @ 0: uvm_test_top.env.agt.sqr [SEQUENCER] Build Phase
+# UVM_INFO scoreboard.sv(22) @ 0: uvm_test_top.env.scr [SCOREBOARD_CLASS] Build Phase!
+# UVM_INFO monitor.sv(34) @ 0: uvm_test_top.env.agt.mon [MONITOR_CLASS] Connect phase!
+# UVM_INFO sequencer.sv(19) @ 0: uvm_test_top.env.agt.sqr [SEQUENCER] Connect Phase!
+# UVM_INFO agent.sv(31) @ 0: uvm_test_top.env.agt [AGENT_CLASS] Connect Phase!
+# UVM_INFO scoreboard.sv(32) @ 0: uvm_test_top.env.scr [*** SCOREBOARD CLASS ***] Connect Phase!
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               test                    -     @471 
+#   env                      environment             -     @478 
+#     agt                    agent                   -     @485 
+#       drv                  driver                  -     @609 
+#         rsp_port           uvm_analysis_port       -     @624 
+#         seq_item_port      uvm_seq_item_pull_port  -     @616 
+#       mon                  monitor                 -     @632 
+#         mon_analysis_port  uvm_analysis_port       -     @640 
+#       sqr                  sequencer               -     @500 
+#         rsp_export         uvm_analysis_export     -     @507 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @601 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     scr                    scoreboard              -     @492 
+#       scr_analysis_imp     uvm_analysis_imp        -     @654 
+# --------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(339) @ 0: reporter [Questa UVM] End Of Elaboration
+# UVM_INFO sequence.sv(57) @ 0: reporter@@full_empty_seq [RD_EMPTY_SEQUENCE] Inside Constructor!
+# UVM_INFO scoreboard.sv(38) @ 0: uvm_test_top.env.scr [*** SCOREBOARD CLASS***] Run Phase!
+# UVM_INFO monitor.sv(41) @ 0: uvm_test_top.env.agt.mon [MONITOR_CLASS] Run Phase!
+# UVM_INFO driver.sv(27) @ 0: uvm_test_top.env.agt.drv [DRIVER_CLASS] Run Phase!
+# UVM_INFO sequence.sv(62) @ 0: reporter@@full_empty_seq [RD_EMPTY_SEQUENCE] Inside Body Task!
+# ------------------------------------------
+# UVM_INFO sequence.sv(68) @ 20: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO driver.sv(66) @ 24: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 24: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 26: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=218, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 26: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 28: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 28: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 30: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 75, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 30: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 32: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 32: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 34: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 95, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 34: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 36: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 36: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 38: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=197, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 38: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 40: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 40: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 42: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=200, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 42: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 44: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 44: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 46: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  8, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 46: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 48: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 48: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 50: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=199, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 50: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 52: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 52: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 54: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=125, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 54: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 56: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 56: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 58: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=166, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 58: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 60: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 60: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 62: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 40, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 62: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 64: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 64: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 66: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 10, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 66: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 68: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 68: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 70: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=103, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 70: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 72: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 72: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 74: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=114, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 74: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 76: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 76: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 78: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=106, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 78: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 80: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 80: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 82: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 13, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 82: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 84: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 84: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 86: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=148, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 86: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 88: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 88: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 90: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=148, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 90: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 92: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 92: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 94: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=223, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 94: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 96: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 96: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 98: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 94, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 98: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 100: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 100: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 102: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=254, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 102: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 104: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 104: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 106: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 16, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 106: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 108: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 108: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 110: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=130, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 110: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 112: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 112: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 114: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 10, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 114: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 116: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 116: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 118: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=208, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 118: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 120: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 120: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 122: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=198, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 122: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 124: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 124: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 126: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 64, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 126: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 128: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 128: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 130: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=128, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 130: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 132: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 132: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 134: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=254, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 134: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 136: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 136: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 138: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=185, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 138: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 140: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 140: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 142: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=189, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 142: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 144: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 144: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 146: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 80, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 146: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 148: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 148: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 150: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 14, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 150: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 152: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 152: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 154: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 43, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 154: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 156: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 156: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 158: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 64, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 158: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 160: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 160: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 162: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 80, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 162: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 164: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 164: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 166: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 16, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 166: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 168: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 168: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 170: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=165, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 170: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 172: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 172: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 174: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=224, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 174: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 176: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 176: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 178: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 11, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 178: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 180: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 180: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 182: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=130, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 182: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 184: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 184: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 186: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 33, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 186: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 188: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 188: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 190: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 31, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 190: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 192: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 192: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 194: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=168, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 194: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 196: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 196: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 198: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 84, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 198: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 200: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 200: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 202: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=249, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 202: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 204: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 204: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 206: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=188, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 206: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 208: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 208: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 210: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=125, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 210: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 212: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 212: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 214: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=169, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 214: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 216: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 216: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 218: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 90, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 218: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 220: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 220: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 222: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  6, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 222: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 224: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 224: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 226: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=111, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 226: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 228: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 228: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 230: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=144, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 230: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 232: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 232: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 234: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=239, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 234: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 236: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 236: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 238: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=144, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 238: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 240: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 240: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 242: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 71, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 242: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 244: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 244: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 246: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 61, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 246: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 248: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 248: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 250: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=208, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 250: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 252: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 252: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 254: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=202, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 254: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 256: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 256: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 258: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=202, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 258: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 260: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 260: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 262: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=140, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 262: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 264: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 264: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 266: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=249, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 266: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 268: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 268: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 270: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 22, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 270: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 272: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 272: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 274: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=159, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 274: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 276: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 276: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 278: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=241, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 278: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 280: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 280: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 282: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=124, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 282: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 284: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 284: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 286: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 68, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 286: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 288: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 288: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 290: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=199, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 290: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 292: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 292: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 294: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=191, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 294: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 296: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 296: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 298: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=229, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 298: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 300: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 300: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 302: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 34, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 302: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 304: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 304: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 306: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=173, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 306: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 308: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 308: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 310: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=218, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 310: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 312: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 312: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 314: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 81, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 314: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 316: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 316: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 318: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=251, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 318: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 320: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 320: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 322: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=217, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 322: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 324: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 324: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 326: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 22, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 326: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 328: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 328: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 330: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 41, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 330: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 332: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 332: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 334: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 36, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 334: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 336: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 336: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 338: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=205, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 338: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 340: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 340: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 342: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=172, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 342: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 344: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 344: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 346: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=192, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 346: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 348: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 348: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 350: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  3, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 350: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 352: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 352: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 354: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=103, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 354: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 356: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 356: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 358: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 22, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 358: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 360: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 360: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 362: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 67, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 362: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 364: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 364: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 366: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=196, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 366: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 368: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 368: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 370: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=129, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 370: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 372: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 372: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 374: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 79, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 374: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 376: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 376: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 378: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=132, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 378: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 380: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 380: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 382: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=250, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 382: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 384: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 384: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 386: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 33, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 386: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 388: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 388: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 390: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=200, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 390: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 392: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 392: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 394: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 73, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 394: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 396: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 396: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 398: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=217, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 398: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 400: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 400: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 402: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=175, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 402: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 404: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 404: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 406: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=201, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 406: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 408: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 408: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 410: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 69, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 410: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 412: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 412: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 414: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=102, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 414: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 416: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 416: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 418: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=168, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 418: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 420: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 420: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 422: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 76, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 422: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 424: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 424: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 426: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=234, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 426: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 428: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 428: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 430: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 50, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 430: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 432: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 432: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 434: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 87, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 434: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 436: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 436: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 438: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=180, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 438: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 440: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 440: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 442: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=143, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 442: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 444: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 444: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 446: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 48, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 446: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 448: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 448: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 450: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 83, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 450: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 452: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 452: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 454: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 30, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 454: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 456: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 456: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 458: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 68, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 458: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 460: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 460: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 462: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=153, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 462: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 464: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 464: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 466: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 80, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 466: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 468: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 468: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 470: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 82, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 470: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 472: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 472: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 474: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=251, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 474: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 476: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 476: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 478: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 25, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 478: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 480: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 480: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 482: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=164, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 482: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 484: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 484: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 486: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=101, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 486: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 488: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 488: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 490: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=221, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 490: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 492: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 492: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 494: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  2, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 494: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 496: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 496: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 498: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=250, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 498: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 500: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 500: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 502: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 91, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 502: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 504: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 504: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 506: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=132, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 506: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 508: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 508: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 510: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  1, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 510: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 512: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 512: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 514: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 74, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 514: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 516: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 516: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 518: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  6, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 518: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 520: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 520: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 522: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=236, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 522: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 524: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 524: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 526: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=105, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 526: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 528: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 528: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 530: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 84, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 530: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 532: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 532: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 534: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=212, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 534: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 536: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 536: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 538: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 22, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 538: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 540: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 540: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 542: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  9, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 542: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 544: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 544: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 546: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=180, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 546: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 548: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 548: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 550: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=204, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 550: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 552: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 552: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 554: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=240, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 554: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 556: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 556: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 558: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=172, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 558: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 560: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 560: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 562: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 54, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 562: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 564: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 564: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 566: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 64, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 566: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 568: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 568: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 570: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=124, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 570: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 572: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 572: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 574: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=108, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 574: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 576: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 576: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 578: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=182, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 578: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 580: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 580: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 582: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=155, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 582: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 584: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 584: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 586: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=120, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 586: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 588: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 588: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 590: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=247, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 590: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 592: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 592: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 594: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 32, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 594: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 596: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 596: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 598: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=121, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 598: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 600: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 600: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 602: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=242, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 602: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 604: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 604: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 606: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=155, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 606: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 608: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 608: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 610: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  8, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 610: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 612: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 612: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 614: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 53, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 614: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 616: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 616: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 618: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  8, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 618: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 620: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 620: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 622: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 14, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 622: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 624: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 624: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 626: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=135, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 626: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 628: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 628: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 630: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 54, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 630: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 632: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 632: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 634: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=236, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 634: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 636: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 636: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 638: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=144, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 638: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 640: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 640: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 642: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=182, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 642: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 644: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 644: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 646: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=218, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 646: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 648: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 648: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 650: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=173, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 650: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 652: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 652: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 654: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 95, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 654: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 656: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 656: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 658: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 23, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 658: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 660: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 660: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 662: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 70, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 662: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 664: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 664: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 666: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=157, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 666: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 668: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 668: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 670: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=181, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 670: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 672: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 672: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 674: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 91, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 674: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 676: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 676: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 678: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=237, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 678: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 680: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 680: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 682: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=129, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 682: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 684: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 684: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 686: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 97, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 686: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 688: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 688: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 690: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=209, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 690: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 692: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 692: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 694: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=180, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 694: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 696: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 696: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 698: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=109, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 698: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 700: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 700: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 702: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=248, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 702: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 704: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 704: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 706: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 33, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 706: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 708: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 708: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 710: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 40, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 710: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 712: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 712: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 714: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 92, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 714: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 716: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 716: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 718: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 83, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 718: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 720: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 720: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 722: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=246, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 722: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 724: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 724: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 726: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=244, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 726: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 728: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 728: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 730: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  1, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 730: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 732: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 732: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 734: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=206, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 734: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 736: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 736: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 738: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=222, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 738: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 740: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 740: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 742: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=214, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 742: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 744: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 744: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 746: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=103, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 746: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 748: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 748: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 750: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=213, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 750: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 752: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 752: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 754: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=246, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 754: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 756: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 756: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 758: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=107, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 758: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 760: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 760: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 762: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 24, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 762: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 764: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 764: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 766: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=195, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 766: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 768: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 768: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 770: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=104, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 770: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 772: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 772: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 774: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 37, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 774: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 776: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 776: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 778: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 68, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 778: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 780: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 780: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 782: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=230, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 782: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 784: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 784: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 786: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=158, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 786: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 788: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 788: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 790: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=193, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 790: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 792: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 792: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 794: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 36, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 794: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 796: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 796: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 798: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 29, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 798: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 800: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 800: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 802: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 82, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 802: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 804: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 804: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 806: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=220, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 806: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 808: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 808: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 810: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=132, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 810: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 812: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 812: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 814: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 22, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 814: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 816: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 816: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 818: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 81, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 818: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 820: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 820: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 822: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=171, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 822: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 824: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 824: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 826: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=204, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 826: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 828: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 828: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 830: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 99, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 830: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 832: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 832: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 834: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=190, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 834: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 836: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 836: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 838: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=211, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 838: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 840: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 840: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 842: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 19, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 842: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 844: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 844: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 846: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=194, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 846: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 848: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 848: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 850: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=181, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 850: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 852: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 852: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 854: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=157, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 854: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 856: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 856: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 858: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=198, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 858: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 860: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 860: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 862: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=234, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 862: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 864: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 864: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 866: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 69, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 866: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 868: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 868: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 870: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=158, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 870: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 872: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 872: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 874: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=149, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 874: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 876: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 876: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 878: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 42, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 878: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 880: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 880: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 882: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=151, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 882: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 884: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 884: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 886: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 39, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 886: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 888: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 888: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 890: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=171, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 890: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 892: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 892: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 894: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  0, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 894: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 896: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 896: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 898: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=237, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 898: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 900: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 900: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 902: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=193, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 902: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 904: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 904: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 906: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  5, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 906: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 908: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 908: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 910: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=105, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 910: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 912: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 912: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 914: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=137, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 914: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 916: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 916: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 918: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=213, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 918: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 920: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 920: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 922: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=221, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 922: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 924: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 924: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 926: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 61, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 926: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 928: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 928: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 930: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=134, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 930: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 932: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 932: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 934: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=232, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 934: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 936: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 936: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 938: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=126, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 938: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 940: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 940: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 942: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=160, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 942: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 944: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 944: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 946: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=220, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 946: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 948: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 948: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 950: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  7, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 950: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 952: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 952: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 954: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=107, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 954: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 956: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 956: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 958: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=168, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 958: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 960: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 960: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 962: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=217, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 962: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 964: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 964: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 966: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 94, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 966: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 968: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 968: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 970: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=106, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 970: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 972: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 972: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 974: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 23, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 974: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 976: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 976: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 978: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=218, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 978: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 980: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 980: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 982: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=214, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 982: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 984: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 984: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 986: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=179, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 986: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 988: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 988: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 990: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 41, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 990: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 992: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 992: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 994: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=154, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 994: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 996: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 996: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 998: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 64, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 998: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1000: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1000: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1002: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 74, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1002: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1004: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1004: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1006: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 28, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1006: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1008: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1008: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1010: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=181, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1010: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1012: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1012: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1014: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=243, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1014: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1016: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1016: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1018: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=172, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1018: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1020: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1020: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1022: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=150, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1022: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1024: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1024: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1026: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 32, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1026: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1028: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1028: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1030: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 81, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1030: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1032: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1032: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1034: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=181, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1034: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1036: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1036: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1038: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=235, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1038: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1040: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1040: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1042: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 55, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1042: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1044: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1044: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1046: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=138, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1046: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1048: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1048: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1050: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=198, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1050: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1052: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1052: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1054: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=126, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1054: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1056: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1056: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1058: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=197, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1058: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1060: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1060: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1062: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 55, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1062: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1064: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1064: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1066: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=210, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1066: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1068: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1068: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1070: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=171, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1070: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1072: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1072: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1074: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=200, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1074: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1076: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1076: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1078: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=117, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1078: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1080: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1080: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1082: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 17, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1082: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1084: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1084: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1086: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 22, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1086: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1088: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1088: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1090: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=192, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1090: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1092: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1092: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1094: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=247, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1094: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1096: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1096: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1098: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=136, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1098: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1100: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1100: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1102: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=236, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1102: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1104: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1104: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1106: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=110, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1106: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1108: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1108: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1110: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 31, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1110: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1112: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1112: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1114: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 50, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1114: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1116: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1116: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1118: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=140, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1118: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1120: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1120: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1122: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 17, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1122: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1124: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1124: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1126: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 73, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1126: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1128: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1128: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1130: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 40, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1130: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1132: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1132: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1134: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 40, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1134: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1136: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(68) @ 1136: reporter@@full_empty_seq [WR_FULL_SEQUENCE] WRITING DATA
+# UVM_INFO scoreboard.sv(56) @ 1138: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in=  1, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1138: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(66) @ 1140: uvm_test_top.env.agt.drv [DRV] DATA WRITE
+# UVM_INFO sequence.sv(76) @ 1140: reporter@@full_empty_seq [RD_EMPTY_SEQUENCE] READING DATA
+# UVM_INFO scoreboard.sv(56) @ 1142: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 92, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1142: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO scoreboard.sv(56) @ 1146: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 92, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1146: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
+# UVM_INFO driver.sv(80) @ 1150: uvm_test_top.env.agt.drv [DRV] DATA READ
+# UVM_INFO scoreboard.sv(56) @ 1150: uvm_test_top.env.scr [*** Scoreboard write data_in ***] Burst Details:w_en=1, data_in= 92, full=0,halffull = 0 
+# UVM_INFO scoreboard.sv(61) @ 1150: uvm_test_top.env.scr [*** Scoreboard write data_in ***] ***************ERROR*****present wr_ptr =   1   previous wr_ptr =   1
